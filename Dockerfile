@@ -1,3 +1,5 @@
 FROM drydock/u16javall:master
 
-COPY bashrc ~/.bashrc
+ADD bashrc /tmp/bashrc
+
+RUN cat /tmp/bashrc > ~/.bashrc
