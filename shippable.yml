@@ -8,6 +8,7 @@ build:
     image_name: test
     image_tag: latest
     pull: false
+    options: "-e BASH_ENV=~/.bashrc"
 
   ci:
     - cat ~/.bashrc
