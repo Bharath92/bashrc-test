@@ -6,6 +6,7 @@ build:
 
   pre_ci_boot:
     image_name: test
+    image_tag: latest
     pull: false
 
   ci:
