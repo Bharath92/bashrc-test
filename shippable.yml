@@ -1,0 +1,18 @@
+language: java
+
+build:
+  pre_ci:
+    - docker build -t=test .
+
+  pre_ci_boot:
+    image_name: test
+    pull: false
+
+  ci:
+    - cat ~/.bashrc
+    - echo $BASH_ENV
+    - printenv
+    - PS1='\s-\v\$ '
+    - source ~/.bashrc
+    - echo $PS1
+    - echo $ANDROID_HOME
